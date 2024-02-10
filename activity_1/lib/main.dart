@@ -132,28 +132,35 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         
       ),
-      floatingActionButton: Padding(
-        padding: EdgeInsets.fromLTRB(10, 0, 0, 0),        
-        child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        
-        children: [
-          FloatingActionButton(
-            onPressed: _decrementCounter,
-            tooltip: 'Decrement',
-            child: const Icon(Icons.remove)),
-          FloatingActionButton( 
-            onPressed: _reset,
-            tooltip: 'Reset',
-            child: const Icon(Icons.circle),),
-            FloatingActionButton( 
-            onPressed: _incrementCounter,
-            tooltip: 'Increment',
-            child: const Icon(Icons.add),)
+      floatingActionButton: Row(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+            child: FloatingActionButton(
+              onPressed: _decrementCounter,
+              tooltip: 'Decrement',
+              child: const Icon(Icons.remove)
+            )
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(38, 0, 70, 0),
+            child: FloatingActionButton(
+              onPressed: _reset,
+              tooltip: 'Reset',
+              child: const Icon(Icons.circle)
+            )
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+            child: FloatingActionButton(
+              onPressed: _incrementCounter,
+              tooltip: 'Increment',
+              child: const Icon(Icons.add)
+            )
+          ),
         ],
         
       ), // This trailing comma makes auto-formatting nicer for build methods.      
-    )
     );
   }
 }
